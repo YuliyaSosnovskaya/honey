@@ -5,21 +5,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link href="node_modules/normalize.css/normalize.css" rel="stylesheet">
-
-  <link href="style.css" rel="stylesheet">
+  <!-- Comment out 2 lines below before making a build!! -->
+  <!-- <link href="node_modules/normalize.css/normalize.css" rel="stylesheet">
+  <link href="src/scss/style.css" rel="stylesheet"> -->
 </head>
 <body>
   <header>
     <div class="a-container">
       <a href="#">PORTFOLIO</a>
-      <a  href="#">ABOUT</a>
-      <div class="icon-header-container">
-        <img src="icons/selection.png" alt="">
+      <a  href="#about">ABOUT</a>
+      <div>
+        <img src="img/selection.png" alt="">
         <div class="decorate-triangle"></div>
       </div>
       <a  href="#">BLOG</a>
-      <a  href="#">GET IN TOUCH</a>
+      <a  href="#getInTouch">GET IN TOUCH</a>
     </div>
   </header>
   <section>
@@ -47,7 +47,7 @@
   
   </div>
 
-  <article class="about-part">
+  <article id='about' class="about-part">
     
     <div class='about-container' >
       <div class="description-part">
@@ -59,18 +59,16 @@
         </div>
       </div>
       <div class="icon-about-container">
-        <a href="#"><img src="icons/icon-facebook.png" alt="facebook-icon"></a>
-        <a href="#"><img src="icons/icon-linkedin.png" alt="linkedin-icon"></a>
-        <a href="#"><img src="icons/icon-telegram.png" alt="telegram-icon"></a>
-        <a href="#"><img src="icons/icon-pinterest.png" alt="pinterest-icon"></a>
-        <a href="#"><img src="icons/icon-messenger.png" alt="messenger-icon"></a>
-
+        <a href="#"><img src="img/icon-facebook.png" alt="facebook-icon"></a>
+        <a href="#"><img src="img/icon-linkedin.png" alt="linkedin-icon"></a>
+        <a href="#"><img src="img/icon-telegram.png" alt="telegram-icon"></a>
+        <a href="#"><img src="img/icon-pinterest.png" alt="pinterest-icon"></a>
+        <a href="#"><img src="img/icon-messenger.png" alt="messenger-icon"></a>
       </div>
-     
     </div>
   </article>
 
-  <article class="inputs-part">
+  <article id='getInTouch' class="inputs-part">
     <div>
       <div class="inputs-column">
         <h2 class="h2-title">Get In Touch</h2>
@@ -91,16 +89,17 @@
           tortor luctus faucibus morbi vitae.
         </p>
         <address>
-          <div><img src="icons/map-icon.png"><span>Elm St. 14/05 Lost City</span></div>
-          <div><img src="icons/map-icon.png"><a href="tel:+35283318635">+ 3528 331 86 35</a></div>
-          <div><img src="icons/letter-icon.png"><a href='mailto:info@test.com'>info@test.com</a></div>
+          <div><img src="img/map-icon.png"><span>Elm St. 14/05 Lost City</span></div>
+          <div><img src="img/map-icon.png"><a href="tel:+35283318635">+ 3528 331 86 35</a></div>
+          <div><img src="img/letter-icon.png"><a href='mailto:info@test.com'>info@test.com</a></div>
 
         </address>
 
       </div>
     </div>
   </article>
-  <footer></footer>
-  
+  <footer>
+    <span></span>
+  </footer>
 </body>
 </html>

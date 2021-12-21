@@ -1,15 +1,27 @@
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+ 
+  // Output standard non-prefixed declaration
+  #{$property}: $value;
+}
+
 $main-gray-bgcolor:  #313131;
 $main-green-bgcolor:#2eb397;
+
+$clip-path-hexagon: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
 
 %dflex-dcolumn {
   display:flex;
   flex-direction: column;
 }
+%dflex-center {
+  display:flex;
+  justify-content: center;
+}
 %margin-lr {
   margin: 0 5%;
-}
-%padding-tb {
-  padding: 10px 0;
 }
 
 *{
@@ -18,36 +30,34 @@ $main-green-bgcolor:#2eb397;
   box-sizing: border-box;
   line-height: 1.4;
 }
+
 a{
   text-decoration: none;
   color: inherit;
 }
 
 header {
-  // position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @extend %dflex-center;
+  // align-items: center;
   height: 70px;
   background-color:$main-gray-bgcolor;
   .a-container{
     display: flex;
     align-items: center;
-    z-index: 100;
+    // z-index: 100;
   }
   a{
     color: #8c8c8c;
     margin: 0 10px;
     &:hover {
-      color: #2eb397;
+      color: $main-green-bgcolor;
     }
     @media (min-width: 370px) and (max-width: 576px) {
       margin: 0 7px;
-
     }
 
   }
-  .icon-header-container{
+  div {
     position: relative;
   }
   img {
@@ -67,38 +77,37 @@ header {
     position: absolute;    
     width: 76px;
     height: 76px;
-    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-    top: 62px;
+    @include prefix(clip-path, $clip-path-hexagon, webkit);
+    top: 65%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
     background-color: $main-gray-bgcolor;
-    @media (min-width: 370px) and (max-width: 576px) {
-      top: 48px;
-      
-    }
   }
   @media (min-width: 370px) and (max-width: 576px) {
     font-size: 13px;
   }
 }
 
-section{
-  margin: 40px 0;
+section {
+  margin: 50px 0;
 }
 
 .hexagon-container1 {
-  display: flex;
-  justify-content: center;
+  @extend %dflex-center;
   @extend %margin-lr;
+  .vertical-border {
+    border-left: 1px solid gray;
+
+  }
 }
 
-.hexagon-container2{
+.hexagon-container2 {
   @extend .hexagon-container1;
   margin: -3.7% 10px;
 }
 .hexagon {
-  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  @include prefix(clip-path, $clip-path-hexagon, webkit);
   margin: 0 4px;
   height: 17vw;
   width: 17vw;
@@ -107,7 +116,7 @@ section{
   // max-width: 200px;
   // max-height: 200px;   
 }
-.h2-title{
+.h2-title {
   font-size: 1.5em;
   color: white;
   margin-bottom: 5px;
@@ -146,7 +155,6 @@ section{
   .icon-about-container {
     display: flex;
     align-self: flex-end;
-    filter: grayscale(1);
   }
   
 }
@@ -177,7 +185,7 @@ section{
 .inputs-part{
   color: white;
   background: $main-gray-bgcolor;
-  @extend %padding-tb;
+  padding: 10px 0;
   >div{
     border-top: 2px solid #292727;
     border-bottom: 2px solid #292727;
@@ -192,22 +200,22 @@ section{
   .inputs-column{
     flex: 2 2;
     @extend %dflex-dcolumn;
-    form{
+    form {
       @extend %dflex-dcolumn;
-      input{
+      input {
         @extend .input-style;
       }
-      textarea{
+      textarea {
         @extend .input-style;
         height: 100px;
         padding-top: 5px;
       }
-      button{
+      button {
         @extend .button-style;
       }
     }
   }
-  .location-column{
+  .location-column {
     @extend %dflex-dcolumn;
     flex: 1 1;
     color: #faf9f994;
@@ -215,18 +223,18 @@ section{
     font-size: 15px;
     margin-left: 10px;
     
-    p{
-    padding-left: 10px;
-    @media  (min-width: 370px) and (max-width: 576px) {
-      padding: 10px 0;
+    p {
+      padding-left: 10px;
+      @media  (min-width: 370px) and (max-width: 576px) {
+        padding: 10px 0;
+      }
     }
-    }
-    address{
+    address {
       @extend %dflex-dcolumn;
-      img{
+      img {
         margin-right: 5px;
       }
-      a{
+      a {
         color: inherit;
         &:hover{
           color:white;
@@ -240,9 +248,8 @@ section{
       }
     }
   }
-
 }
-footer{
+footer {
   height: 50px;
   background-color: #222020;
 }

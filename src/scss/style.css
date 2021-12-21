@@ -8,12 +8,17 @@
           flex-direction: column;
 }
 
-.hexagon-container1, .hexagon-container2, .about-part .about-container, .inputs-part > div {
-  margin: 0 5%;
+header, .hexagon-container1, .hexagon-container2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.inputs-part {
-  padding: 10px 0;
+.hexagon-container1, .hexagon-container2, .about-part .about-container, .inputs-part > div {
+  margin: 0 5%;
 }
 
 * {
@@ -30,15 +35,6 @@ a {
 }
 
 header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   height: 70px;
   background-color: #313131;
 }
@@ -50,7 +46,6 @@ header .a-container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: 100;
 }
 
 header a {
@@ -68,7 +63,7 @@ header a:hover {
   }
 }
 
-header .icon-header-container {
+header div {
   position: relative;
 }
 
@@ -94,19 +89,13 @@ header .decorate-triangle {
   width: 76px;
   height: 76px;
   -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-          clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-  top: 62px;
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  top: 65%;
   left: 50%;
   margin-right: -50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   background-color: #313131;
-}
-
-@media (min-width: 370px) and (max-width: 576px) {
-  header .decorate-triangle {
-    top: 48px;
-  }
 }
 
 @media (min-width: 370px) and (max-width: 576px) {
@@ -116,16 +105,11 @@ header .decorate-triangle {
 }
 
 section {
-  margin: 40px 0;
+  margin: 50px 0;
 }
 
-.hexagon-container1, .hexagon-container2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.hexagon-container1 .vertical-border, .hexagon-container2 .vertical-border {
+  border-left: 1px solid gray;
 }
 
 .hexagon-container2 {
@@ -134,7 +118,7 @@ section {
 
 .hexagon {
   -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-          clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
   margin: 0 4px;
   height: 17vw;
   width: 17vw;
@@ -192,8 +176,6 @@ section {
   display: flex;
   -ms-flex-item-align: end;
       align-self: flex-end;
-  -webkit-filter: grayscale(1);
-          filter: grayscale(1);
 }
 
 .input-style, .inputs-part .inputs-column form input, .inputs-part .inputs-column form textarea {
@@ -226,6 +208,7 @@ section {
 .inputs-part {
   color: white;
   background: #313131;
+  padding: 10px 0;
 }
 
 .inputs-part > div {
