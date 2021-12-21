@@ -1,0 +1,315 @@
+.about-part .about-container, .about-part .description-part .description, .inputs-part .inputs-column, .inputs-part .inputs-column form, .inputs-part .location-column, .inputs-part .location-column address {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.hexagon-container1, .hexagon-container2, .about-part .about-container, .inputs-part > div {
+  margin: 0 5%;
+}
+
+.inputs-part {
+  padding: 10px 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  line-height: 1.4;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 70px;
+  background-color: #313131;
+}
+
+header .a-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 100;
+}
+
+header a {
+  color: #8c8c8c;
+  margin: 0 10px;
+}
+
+header a:hover {
+  color: #2eb397;
+}
+
+@media (min-width: 370px) and (max-width: 576px) {
+  header a {
+    margin: 0 7px;
+  }
+}
+
+header .icon-header-container {
+  position: relative;
+}
+
+header img {
+  width: 60px;
+  height: 70px;
+  position: relative;
+  margin: 10px;
+  -webkit-transform: rotate(203deg);
+          transform: rotate(203deg);
+  z-index: 1;
+}
+
+@media (min-width: 370px) and (max-width: 576px) {
+  header img {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+header .decorate-triangle {
+  position: absolute;
+  width: 76px;
+  height: 76px;
+  -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+          clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  top: 62px;
+  left: 50%;
+  margin-right: -50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #313131;
+}
+
+@media (min-width: 370px) and (max-width: 576px) {
+  header .decorate-triangle {
+    top: 48px;
+  }
+}
+
+@media (min-width: 370px) and (max-width: 576px) {
+  header {
+    font-size: 13px;
+  }
+}
+
+section {
+  margin: 40px 0;
+}
+
+.hexagon-container1, .hexagon-container2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.hexagon-container2 {
+  margin: -3.7% 10px;
+}
+
+.hexagon {
+  -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+          clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  margin: 0 4px;
+  height: 17vw;
+  width: 17vw;
+}
+
+.h2-title {
+  font-size: 1.5em;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.about-part {
+  background: #2eb397;
+  padding: 20px 0;
+}
+
+.about-part .about-container {
+  padding: 20px 10px;
+  border-left: 2px solid #27977feb;
+  border-right: 2px solid #27977feb;
+}
+
+.about-part .description-part {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about-part .description-part .description {
+  padding: 10px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1;
+          flex: 1 1;
+}
+
+.about-part .description-part .position {
+  color: #156655;
+  font-weight: 600;
+}
+
+.about-part .description-part p {
+  color: white;
+  margin-top: 10px;
+}
+
+@media (min-width: 370px) and (max-width: 576px) {
+  .about-part .description-part p {
+    font-size: 12px;
+  }
+}
+
+.about-part .icon-about-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
+.input-style, .inputs-part .inputs-column form input, .inputs-part .inputs-column form textarea {
+  background: #4e4d4d;
+  height: 45px;
+  outline: none;
+  border: none;
+  text-indent: 10px;
+  font-size: 15px;
+  color: white;
+  margin-top: 10px;
+}
+
+.button-style, .inputs-part .inputs-column form button {
+  background-color: #2eb397;
+  color: white;
+  width: 80px;
+  height: 40px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  outline: none;
+  border: none;
+  margin: 10px 0;
+}
+
+.button-style:hover, .inputs-part .inputs-column form button:hover {
+  cursor: pointer;
+}
+
+.inputs-part {
+  color: white;
+  background: #313131;
+}
+
+.inputs-part > div {
+  border-top: 2px solid #292727;
+  border-bottom: 2px solid #292727;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 20px 10px;
+}
+
+@media (min-width: 370px) and (max-width: 576px) {
+  .inputs-part > div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.inputs-part .inputs-column {
+  -webkit-box-flex: 2;
+      -ms-flex: 2 2;
+          flex: 2 2;
+}
+
+.inputs-part .inputs-column form textarea {
+  height: 100px;
+  padding-top: 5px;
+}
+
+.inputs-part .location-column {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1;
+          flex: 1 1;
+  color: #faf9f994;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  font-size: 15px;
+  margin-left: 10px;
+}
+
+.inputs-part .location-column p {
+  padding-left: 10px;
+}
+
+@media (min-width: 370px) and (max-width: 576px) {
+  .inputs-part .location-column p {
+    padding: 10px 0;
+  }
+}
+
+.inputs-part .location-column address img {
+  margin-right: 5px;
+}
+
+.inputs-part .location-column address a {
+  color: inherit;
+}
+
+.inputs-part .location-column address a:hover {
+  color: white;
+}
+
+@media (min-width: 370px) and (max-width: 576px) {
+  .inputs-part .location-column address {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    font-size: 14px;
+  }
+}
+
+footer {
+  height: 50px;
+  background-color: #222020;
+}
+/*# sourceMappingURL=style.css.map */

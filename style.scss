@@ -1,0 +1,248 @@
+$main-gray-bgcolor:  #313131;
+$main-green-bgcolor:#2eb397;
+
+%dflex-dcolumn {
+  display:flex;
+  flex-direction: column;
+}
+%margin-lr {
+  margin: 0 5%;
+}
+%padding-tb {
+  padding: 10px 0;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.4;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  // position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  background-color:$main-gray-bgcolor;
+  .a-container{
+    display: flex;
+    align-items: center;
+    z-index: 100;
+  }
+  a{
+    color: #8c8c8c;
+    margin: 0 10px;
+    &:hover {
+      color: #2eb397;
+    }
+    @media (min-width: 370px) and (max-width: 576px) {
+      margin: 0 7px;
+
+    }
+
+  }
+  .icon-header-container{
+    position: relative;
+  }
+  img {
+    width: 60px;
+    height: 70px;
+    position: relative;
+    margin: 10px;
+    transform: rotate(203deg);
+    z-index: 1;
+    @media (min-width: 370px) and (max-width: 576px) {
+      height: 40px;
+      width: 40px;
+
+    }
+  }
+  .decorate-triangle {
+    position: absolute;    
+    width: 76px;
+    height: 76px;
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    top: 62px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    background-color: $main-gray-bgcolor;
+    @media (min-width: 370px) and (max-width: 576px) {
+      top: 48px;
+      
+    }
+  }
+  @media (min-width: 370px) and (max-width: 576px) {
+    font-size: 13px;
+  }
+}
+
+section{
+  margin: 40px 0;
+}
+
+.hexagon-container1 {
+  display: flex;
+  justify-content: center;
+  @extend %margin-lr;
+}
+
+.hexagon-container2{
+  @extend .hexagon-container1;
+  margin: -3.7% 10px;
+}
+.hexagon {
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  margin: 0 4px;
+  height: 17vw;
+  width: 17vw;
+  // flex: 1 1 150px;
+  // min-width: 150px;
+  // max-width: 200px;
+  // max-height: 200px;   
+}
+.h2-title{
+  font-size: 1.5em;
+  color: white;
+  margin-bottom: 5px;
+}
+.about-part {
+  background: $main-green-bgcolor;
+  padding: 20px 0;
+  .about-container{
+   @extend %dflex-dcolumn;
+   @extend %margin-lr;
+    padding: 20px 10px;
+    border-left:  2px solid #27977feb;
+    border-right: 2px solid #27977feb;
+  }
+  .description-part {
+    
+    display: flex;
+    .description {
+      @extend %dflex-dcolumn;
+      padding: 10px;
+      flex: 1 1;
+    }
+    .position{
+      color: #156655;
+      font-weight: 600;
+    }
+    p{
+      color: white;
+      margin-top: 10px;
+      @media (min-width: 370px) and (max-width: 576px) {
+        font-size: 12px;
+      }
+    }
+
+  }
+  .icon-about-container {
+    display: flex;
+    align-self: flex-end;
+    filter: grayscale(1);
+  }
+  
+}
+.input-style {
+  background: #4e4d4d;
+  height: 45px;
+  outline: none;
+  border: none;
+  text-indent: 10px;
+  font-size: 15px;
+  color: white;
+  margin-top: 10px;
+}
+.button-style {
+  background-color: $main-green-bgcolor;
+  color: white;
+  width: 80px;
+  height: 40px;
+  align-self: flex-end;
+  outline: none;
+  border: none;
+  margin: 10px 0;
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+.inputs-part{
+  color: white;
+  background: $main-gray-bgcolor;
+  @extend %padding-tb;
+  >div{
+    border-top: 2px solid #292727;
+    border-bottom: 2px solid #292727;
+    display: flex;
+    justify-content: space-evenly;
+    @extend %margin-lr;
+    padding: 20px 10px;
+    @media (min-width: 370px) and (max-width: 576px) {
+      flex-direction: column;
+    }
+  }
+  .inputs-column{
+    flex: 2 2;
+    @extend %dflex-dcolumn;
+    form{
+      @extend %dflex-dcolumn;
+      input{
+        @extend .input-style;
+      }
+      textarea{
+        @extend .input-style;
+        height: 100px;
+        padding-top: 5px;
+      }
+      button{
+        @extend .button-style;
+      }
+    }
+  }
+  .location-column{
+    @extend %dflex-dcolumn;
+    flex: 1 1;
+    color: #faf9f994;
+    justify-content: space-evenly;
+    font-size: 15px;
+    margin-left: 10px;
+    
+    p{
+    padding-left: 10px;
+    @media  (min-width: 370px) and (max-width: 576px) {
+      padding: 10px 0;
+    }
+    }
+    address{
+      @extend %dflex-dcolumn;
+      img{
+        margin-right: 5px;
+      }
+      a{
+        color: inherit;
+        &:hover{
+          color:white;
+        }
+      }
+      @media  (min-width: 370px) and (max-width: 576px) {
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        font-size: 14px;
+      }
+    }
+  }
+
+}
+footer{
+  height: 50px;
+  background-color: #222020;
+}
