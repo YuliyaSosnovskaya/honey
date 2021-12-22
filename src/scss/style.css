@@ -1,4 +1,4 @@
-.about-part .about-container, .about-part .description-part .description, .inputs-part .inputs-column, .inputs-part .inputs-column form, .inputs-part .location-column, .inputs-part .location-column address {
+.about-part .about-container, .about-part .description-part div, .inputs-part .inputs-column, .inputs-part .inputs-column form, .inputs-part .location-column, .inputs-part .location-column address {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -147,14 +147,14 @@ section {
   display: flex;
 }
 
-.about-part .description-part .description {
+.about-part .description-part div {
   padding: 10px;
   -webkit-box-flex: 1;
       -ms-flex: 1 1;
           flex: 1 1;
 }
 
-.about-part .description-part .position {
+.about-part .description-part span {
   color: #156655;
   font-weight: 600;
 }

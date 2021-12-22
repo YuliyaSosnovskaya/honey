@@ -111,10 +111,6 @@ section {
   margin: 0 4px;
   height: 17vw;
   width: 17vw;
-  // flex: 1 1 150px;
-  // min-width: 150px;
-  // max-width: 200px;
-  // max-height: 200px;   
 }
 .h2-title {
   font-size: 1.5em;
@@ -132,31 +128,28 @@ section {
     border-right: 2px solid #27977feb;
   }
   .description-part {
-    
     display: flex;
-    .description {
+    div {
       @extend %dflex-dcolumn;
       padding: 10px;
       flex: 1 1;
     }
-    .position{
+    span {
       color: #156655;
       font-weight: 600;
     }
-    p{
+    p {
       color: white;
       margin-top: 10px;
       @media (min-width: 370px) and (max-width: 576px) {
         font-size: 12px;
       }
     }
-
   }
   .icon-about-container {
     display: flex;
     align-self: flex-end;
   }
-  
 }
 .input-style {
   background: #4e4d4d;
@@ -222,7 +215,6 @@ section {
     justify-content: space-evenly;
     font-size: 15px;
     margin-left: 10px;
-    
     p {
       padding-left: 10px;
       @media  (min-width: 370px) and (max-width: 576px) {
