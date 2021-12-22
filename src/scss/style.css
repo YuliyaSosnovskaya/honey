@@ -29,6 +29,10 @@ header, .hexagon-container1, .hexagon-container2 {
   line-height: 1.4;
 }
 
+.svg-hexagon {
+  width: 17vw;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -108,12 +112,8 @@ section {
   margin: 50px 0;
 }
 
-.hexagon-container1 .vertical-border, .hexagon-container2 .vertical-border {
-  border-left: 1px solid gray;
-}
-
 .hexagon-container2 {
-  margin: -3.7% 10px;
+  margin: -3.4% 10px;
 }
 
 .hexagon {

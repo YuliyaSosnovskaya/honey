@@ -31,6 +31,10 @@ $clip-path-hexagon: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
   line-height: 1.4;
 }
 
+.svg-hexagon {
+  width: 17vw;
+}
+
 a{
   text-decoration: none;
   color: inherit;
@@ -38,13 +42,11 @@ a{
 
 header {
   @extend %dflex-center;
-  // align-items: center;
   height: 70px;
   background-color:$main-gray-bgcolor;
   .a-container{
     display: flex;
     align-items: center;
-    // z-index: 100;
   }
   a{
     color: #8c8c8c;
@@ -96,25 +98,17 @@ section {
 .hexagon-container1 {
   @extend %dflex-center;
   @extend %margin-lr;
-  .vertical-border {
-    border-left: 1px solid gray;
-
-  }
 }
 
 .hexagon-container2 {
   @extend .hexagon-container1;
-  margin: -3.7% 10px;
+  margin: -3.4% 10px;
 }
 .hexagon {
   @include prefix(clip-path, $clip-path-hexagon, webkit);
   margin: 0 4px;
   height: 17vw;
-  width: 17vw;
-  // flex: 1 1 150px;
-  // min-width: 150px;
-  // max-width: 200px;
-  // max-height: 200px;   
+  width: 17vw; 
 }
 .h2-title {
   font-size: 1.5em;
