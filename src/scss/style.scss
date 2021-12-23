@@ -75,8 +75,8 @@ header {
     }
   }
   a {
-    margin: 0 15px;
-    font-size: 10px;
+    margin: 0 16px;
+    font-size: 12px;
     color: #fff;
     font-weight: 700;
     font-family: sans-serif;
@@ -107,7 +107,7 @@ header {
     @extend %center;
     width: 130px;
     height: 150px;
-    top: 20px;
+    top: 27px;
     background-color: $main-gray-bgcolor;
   }
   // @media (min-width: 370px) and (max-width: 576px) {
@@ -139,7 +139,7 @@ section {
 }
 
 .hexagon-block {
-  margin: 7% 0;
+  margin: 6% 0;
 }
 
 .hexagon-container1 {
@@ -189,7 +189,7 @@ p {
   .about-container{
    @extend %flex-dcolumn;
    justify-content: center;
-   padding: 7% 2%;  
+   padding: 4% 2%;  
    border-left: 2px solid #219d84;
    border-right: 2px solid #219d84;
    width: calc(16vw * 4 + 10%);
@@ -201,8 +201,8 @@ p {
       margin-left: 20px;
     }
     .author-hexagon {
-      width: 205px;
-      height: 240px;
+      height: calc(15vw * 1.15);
+      width: 15vw;
       margin: 0;
     }
     .author-name {
@@ -227,6 +227,7 @@ p {
     align-self: flex-end;
     filter: sepia(100%) hue-rotate(670deg) saturate(618%) invert(1);
     opacity: 0.7;
+    margin-top: 10px;
     img {
       width: 25px;
     }
@@ -267,7 +268,7 @@ p {
     border-bottom: 2px solid #2b2b2b;
     margin: 0 4%;
     .gt-block {
-      padding: 7% 0;
+      padding: 4% 0;
       width: calc(16vw * 4 + 6%);
       // @media (min-width: 370px) and (max-width: 576px) {
       //   flex-direction: column;
