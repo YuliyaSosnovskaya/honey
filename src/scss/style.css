@@ -1,3 +1,10 @@
+header .logo, header .decorate-triangle {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
 .about-part .about-container, .about-part .description-part div, .inputs-part .inputs-column, .inputs-part .inputs-column form, .inputs-part .location-column, .inputs-part .location-column address {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8,7 +15,7 @@
           flex-direction: column;
 }
 
-header, .hexagon-container1, .hexagon-container2 {
+header .a-container, .hexagon-container1, .hexagon-container2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -17,7 +24,16 @@ header, .hexagon-container1, .hexagon-container2 {
           justify-content: center;
 }
 
-.hexagon-container1, .hexagon-container2, .about-part .about-container, .inputs-part > div {
+header .a-container .left-links, header .a-container .right-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.inputs-part > div {
   margin: 0 5%;
 }
 
@@ -40,105 +56,128 @@ header {
 }
 
 header .a-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  height: 100%;
+}
+
+header .a-container .left-links {
+  margin-right: 60px;
+}
+
+header .a-container .right-links {
+  margin-left: 60px;
 }
 
 header a {
-  color: #8c8c8c;
-  margin: 0 10px;
+  margin: 0 15px;
+  font-size: 10px;
+  color: #fff;
+  font-weight: 700;
+  font-family: sans-serif;
 }
 
 header a:hover {
-  color: #2eb397;
+  color: #2eb398;
 }
 
-@media (min-width: 370px) and (max-width: 576px) {
-  header a {
-    margin: 0 7px;
-  }
+header span {
+  color: #4c4c4c;
+  padding-bottom: 15px;
+  font-size: 30px;
 }
 
-header div {
-  position: relative;
-}
-
-header img {
-  width: 60px;
-  height: 70px;
-  position: relative;
-  margin: 10px;
-  -webkit-transform: rotate(203deg);
-          transform: rotate(203deg);
-  z-index: 1;
-}
-
-@media (min-width: 370px) and (max-width: 576px) {
-  header img {
-    height: 40px;
-    width: 40px;
-  }
+header .logo {
+  width: 64px;
+  height: 55px;
+  top: 40px;
 }
 
 header .decorate-triangle {
-  position: absolute;
-  width: 76px;
-  height: 76px;
   -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
   clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-  top: 65%;
-  left: 50%;
-  margin-right: -50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  width: 130px;
+  height: 150px;
+  top: 20px;
   background-color: #313131;
 }
 
-@media (min-width: 370px) and (max-width: 576px) {
-  header {
-    font-size: 13px;
-  }
-}
-
 section {
-  margin: 50px 0;
+  margin: 10px 0;
 }
 
-.hexagon-container1 .vertical-border, .hexagon-container2 .vertical-border {
-  border-left: 1px solid gray;
+section .lines {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 4% 8%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section .lines div {
+  width: 100%;
+  border-top: 2px solid #e4e9eb;
+}
+
+section .lines .left-line {
+  margin-right: 70px;
+}
+
+section .lines .right-line {
+  margin-left: 70px;
+}
+
+section .bottom-line {
+  border-top: 2px solid #e4e9eb;
+  margin: 8% 4% 0;
+}
+
+.hexagon-container1 .vertical-line, .hexagon-container2 .vertical-line, .hexagon-container1 .vertical-left-line, .hexagon-container2 .vertical-left-line, .hexagon-container1 .vertical-right-line, .hexagon-container2 .vertical-right-line {
+  height: calc(16vw * 1.15 / 2);
+  border-left: 2px solid #e4e9eb;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.hexagon-container1 .vertical-left-line, .hexagon-container2 .vertical-left-line {
+  right: 1%;
+}
+
+.hexagon-container1 .vertical-right-line, .hexagon-container2 .vertical-right-line {
+  left: 1%;
 }
 
 .hexagon-container2 {
-  margin: -3.7% 10px;
+  margin: -3% 0;
 }
 
 .hexagon {
   -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
   clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-  margin: 0 4px;
-  height: 17vw;
-  width: 17vw;
-}
-
-.h2-title {
-  font-size: 1.5em;
-  color: white;
-  margin-bottom: 5px;
+  margin: 0 1%;
+  height: calc(16vw * 1.15);
+  width: 16vw;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .about-part {
-  background: #2eb397;
+  background: #2eb398;
   padding: 20px 0;
 }
 
 .about-part .about-container {
-  padding: 20px 10px;
-  border-left: 2px solid #27977feb;
-  border-right: 2px solid #27977feb;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 60px 10px;
+  border-left: 2px solid #219d84;
+  border-right: 2px solid #219d84;
+  margin: 0 12vw;
 }
 
 .about-part .description-part {
@@ -148,20 +187,34 @@ section {
 }
 
 .about-part .description-part div {
-  padding: 10px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1;
-          flex: 1 1;
+  margin-left: 15px;
 }
 
-.about-part .description-part span {
-  color: #156655;
-  font-weight: 600;
+.about-part .description-part .author-hexagon {
+  width: 205px;
+  height: 240px;
+}
+
+.about-part .description-part .author-label {
+  font-size: 18px;
+  color: #20816d;
+  font-family: system-ui;
+}
+
+.about-part .description-part .author-name {
+  font-size: 30px;
+  color: #d7fcf5;
+  font-weight: 100;
+  font-family: system-ui;
 }
 
 .about-part .description-part p {
-  color: white;
+  font-size: 12px;
+  color: #d7fcf5;
+  font-weight: 400;
+  font-family: sans-serif;
   margin-top: 10px;
+  line-height: 22px;
 }
 
 @media (min-width: 370px) and (max-width: 576px) {
@@ -176,6 +229,13 @@ section {
   display: flex;
   -ms-flex-item-align: end;
       align-self: flex-end;
+  -webkit-filter: sepia(100%) hue-rotate(670deg) saturate(618%) invert(1);
+          filter: sepia(100%) hue-rotate(670deg) saturate(618%) invert(1);
+  opacity: 0.7;
+}
+
+.about-part .icon-about-container img {
+  width: 25px;
 }
 
 .input-style, .inputs-part .inputs-column form input, .inputs-part .inputs-column form textarea {
@@ -190,7 +250,7 @@ section {
 }
 
 .button-style, .inputs-part .inputs-column form button {
-  background-color: #2eb397;
+  background-color: #2eb398;
   color: white;
   width: 80px;
   height: 40px;
