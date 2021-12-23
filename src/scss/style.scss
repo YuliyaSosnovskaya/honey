@@ -68,10 +68,16 @@ header {
     .left-links {
       margin-right: 60px;
       @extend %flex-align-center;
+      @media (max-width: 600px) {
+        margin-right: 48px;
+      }
     }
     .right-links {
       margin-left: 60px;
       @extend %flex-align-center;
+      @media (max-width: 600px) {
+        margin-left: 48px;
+      }
     }
   }
   a {
@@ -83,9 +89,11 @@ header {
     &:hover {
       color: $main-green-bgcolor;
     }
-    // @media (min-width: 370px) and (max-width: 576px) {
-    //   margin: 0 7px;
-    // }
+    @media (max-width: 600px) {
+      font-size: 9px;
+      margin: 0px 8px;
+    }
+    
   }
   span {
     color: #4c4c4c;
@@ -97,10 +105,11 @@ header {
     width: 64px;
     height: 55px;
     top: 40px;
-    // @media (min-width: 370px) and (max-width: 576px) {
-    //   height: 40px;
-    //   width: 40px;
-    // }
+    @media (max-width: 600px) {
+      width: 44px;
+      height: 36px;
+    }
+    
   }
   .decorate-triangle {
     @include prefix(clip-path, $clip-path-hexagon, webkit);
@@ -109,10 +118,13 @@ header {
     height: 150px;
     top: 27px;
     background-color: $main-gray-bgcolor;
+    @media (max-width: 600px) {
+      top: 25px;
+      width: 100px;
+      height: 130px;
+    }
   }
-  // @media (min-width: 370px) and (max-width: 576px) {
-  //   font-size: 13px;
-  // }
+ 
 }
 
 section {
@@ -217,9 +229,6 @@ p {
       @extend p;
       color: #d7fcf5;
       margin-top: 15px;
-      // @media (min-width: 370px) and (max-width: 576px) {
-      //   font-size: 12px;
-      // }
     }
   }
   .icon-about-container {
@@ -270,9 +279,7 @@ p {
     .gt-block {
       padding: 4% 0;
       width: calc(16vw * 4 + 6%);
-      // @media (min-width: 370px) and (max-width: 576px) {
-      //   flex-direction: column;
-      // }
+      
       >h2 {
         @extend %chapter-header;
         color: #e0e0e0;
@@ -285,6 +292,9 @@ p {
         display: flex;
         align-items: start;
         margin-top: 25px;
+        @media (max-width: 700px) {
+        display: block;
+        }
         form {
           @extend %flex-dcolumn;
           flex: 2 2;
@@ -308,15 +318,16 @@ p {
           color: #a39999;
           font-size: 15px;
           margin-left: 20px;
+          @media (max-width: 700px) {
+            margin-left: 0;
+            margin-top: 25px;
+          }
           p {
             @extend p;
             margin: 0;
             b {
               color: #e0e0e0;
             }
-            // @media (min-width: 370px) and (max-width: 576px) {
-            //   font-size: 12px;
-            // }
           }
           address {
             margin-top: 40px;
@@ -337,12 +348,6 @@ p {
                 }
               }
             }
-            // @media  (min-width: 370px) and (max-width: 576px) {
-            //   flex-direction: row;
-            //   justify-content: space-around;
-            //   flex-wrap: wrap;
-            //   font-size: 14px;
-            // }
           }
         }
       }
