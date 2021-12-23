@@ -31,28 +31,30 @@
       <div class="left-line"></div>
       <div class="right-line"></div>
     </div>
-    <div class="hexagon-container1">
-      <div class="vertical-left-line"></div>
-      <img src='./img/monster1.png' class="hexagon"></img>
-      <img src='./img/monster2.png' class="hexagon"></img>
-      <img src='./img/monster3.png' class="hexagon"></img>
-      <img src='./img/monster4.png' class="hexagon"></img>
-      <div class="vertical-right-line"></div>
-    </div>
-    <div class="hexagon-container2">
-      <img src='./img/monster5.png' class="hexagon"></img>
-      <img src='./img/monster6.png' class="hexagon"></img>
-      <img src='./img/monster7.png' class="hexagon"></img>
-      <img src='./img/monster8.png' class="hexagon"></img>
-      <img src='./img/monster9.png' class="hexagon"></img>
-    </div>
-    <div class="hexagon-container1">
-      <div class="vertical-left-line"></div>
-      <img src='./img/monster10.png' class="hexagon"></img>
-      <img src='./img/monster11.png' class="hexagon"></img>
-      <img src='./img/monster12.png' class="hexagon"></img>
-      <img src='./img/monster13.png' class="hexagon"></img>
-      <div class="vertical-right-line"></div>
+    <div class="hexagon-block">
+      <div class="hexagon-container1">
+        <div class="vertical-left-line"></div>
+        <img src='./img/monster1.png' class="hexagon"></img>
+        <img src='./img/monster2.png' class="hexagon"></img>
+        <img src='./img/monster3.png' class="hexagon"></img>
+        <img src='./img/monster4.png' class="hexagon"></img>
+        <div class="vertical-right-line"></div>
+      </div>
+      <div class="hexagon-container2">
+        <img src='./img/monster5.png' class="hexagon"></img>
+        <img src='./img/monster6.png' class="hexagon"></img>
+        <img src='./img/monster7.png' class="hexagon"></img>
+        <img src='./img/monster8.png' class="hexagon"></img>
+        <img src='./img/monster9.png' class="hexagon"></img>
+      </div>
+      <div class="hexagon-container1">
+        <div class="vertical-left-line"></div>
+        <img src='./img/monster10.png' class="hexagon"></img>
+        <img src='./img/monster11.png' class="hexagon"></img>
+        <img src='./img/monster12.png' class="hexagon"></img>
+        <img src='./img/monster13.png' class="hexagon"></img>
+        <div class="vertical-right-line"></div>
+      </div>
     </div>
     <div class="bottom-line"></div>
   </section>
@@ -61,8 +63,8 @@
       <div class="description-part">
         <img src='./img/smithandersen.png' class="hexagon author-hexagon"></img>
         <div>
-          <span class="author-name">Smith Anderson</span>
-          <span class="author-label">Illustrator & Character Designer</span>
+          <h2 class="author-name">Smith Anderson</h2>
+          <span class="author-descr">Illustrator & Character Designer</span>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, explicabo rem maiores iusto laboriosam dicta quam impedit, iste est, alias quia doloremque nihil amet harum? Perferendis deleniti eveniet odit exercitationem?Lorem ipsum dolor sit amet consectetur adipisicing elit. At vitae fuga molestiae quisquam, nobis, quasi, nesciunt natus quidem maxime voluptatum voluptas libero? Iusto dicta cumque tenetur tempora. Laborum, eius!</p>
         </div>
       </div>
@@ -76,34 +78,41 @@
       </div>
     </div>
   </article>
-  <article id='getInTouch' class="inputs-part">
+  <article class="gt-section" id='getInTouch'>
+    <!-- <div class="top-line"></div> -->
     <div>
-      <div class="inputs-column">
-        <h2 class="h2-title">Get In Touch</h2>
+      <div class="gt-block">
+        <h2>Get In Touch</h2>
         <span>In order to get in touch use the contact form below:</span>
-        <form>
-          <input type="text" placeholder="Name (Required)" required>
-          <input type="text" placeholder="Email (Required)" required>
-          <input type="text" placeholder="Subject">
-          <textarea placeholder="Write your message here..."></textarea>
-          <button type="submit">SEND</button>
-        </form>
-      </div>
-      <div class="location-column">
-        <p>Quisque Hendrerit: purus dapibus,
-          ornare nibh vitae, viverra nibh. Fusce
-          vitae aliquam tellus. Proin sit amet
-          volutpat libero. Nulla sed nunc et
-          tortor luctus faucibus morbi vitae.
-        </p>
-        <address>
-          <div><img src="./img/map-icon.png"><span>Elm St. 14/05 Lost City</span></div>
-          <div><img src="./img/map-icon.png"><a href="tel:+35283318635">+ 3528 331 86 35</a></div>
-          <div><img src="./img/letter-icon.png"><a href='mailto:info@test.com'>info@test.com</a></div>
-        </address>
+        <div>
+          <form>
+            <input type="text" placeholder="Name (Required)" required>
+            <input type="text" placeholder="Email (Required)" required>
+            <input type="text" placeholder="Subject">
+            <textarea placeholder="Write your message here..."></textarea>
+            <button type="submit">SEND</button>
+          </form>
+          <div>
+            <p><b>Quisque Hendrerit:</b> purus dapibus,
+              ornare nibh vitae, viverra nibh. Fusce
+              vitae aliquam tellus. Proin sit amet
+              volutpat libero. Nulla sed nunc et
+              tortor luctus faucibus morbi vitae.
+            </p>
+            <address>
+              <div><img src="./img/map.svg"><span>Elm St. 14/05 Lost City</span></div>
+              <div><img src="./img/call.svg"><a href="tel:+35283318635">+ 3528 331 86 35</a></div>
+              <div><img src="./img/message.svg"><a href='mailto:info@hexalcorp.com'>info@hexalcorp.com</a></div>
+            </address>
+          </div>
+        </div>
       </div>
     </div>
+    
+    <!-- <div class="bottom-line"></div> -->
   </article>
-  <footer></footer>
+  <footer>
+    <span>&copy; Copyright 2021 by Yusi</span>
+  </footer>
 </body>
 </html>
