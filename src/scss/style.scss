@@ -297,6 +297,7 @@ p {
             @extend .input-style;
             height: 100px;
             padding-top: 10px;
+            resize: none;
           }
           button {
             @extend .send-button-style;

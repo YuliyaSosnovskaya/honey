@@ -329,6 +329,7 @@ p, .about-part .description-part p, .gt-section > div .gt-block > div > div p {
 .gt-section > div .gt-block > div form textarea {
   height: 100px;
   padding-top: 10px;
+  resize: none;
 }
 
 .gt-section > div .gt-block > div > div {
