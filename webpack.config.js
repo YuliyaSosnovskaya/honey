@@ -7,9 +7,13 @@ module.exports = {
   entry: './src/app.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.[hash].js',
-    assetModuleFilename: 'imgs/[name][ext]', // specify how to store our images in dist
+    publicPath: '/',
+    filename: 'bundle.js',
+    assetModuleFilename: 'img/[name][ext]', // specify how to store our images in dist
     clean: true, // to clean dist folder right before the buid process
+  },
+  devServer: {
+    static: './dist', // for webpack-dev-server
   },
   module: {
     rules: [
@@ -35,6 +39,6 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({template: './src/index.html'}), // create index.html file in "dist" folder based on template and add <script> with bundle
-    new MiniCssExtractPlugin({filename: '[name].css'}) // build all our css into separate file
+    new MiniCssExtractPlugin() // build all our css into separate file
   ]
 };
