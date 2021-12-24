@@ -1,39 +1,40 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
+  mode: "development", // don't minify all build files
   entry: './src/app.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
-    // Specify loaders for images.
-    assetModuleFilename: 'imgs/[name][hash][ext]',
-    clean: true,
+    filename: 'bundle.[hash].js',
+    assetModuleFilename: 'imgs/[name][hash][ext]', // specify how to store our images in dist
+    clean: true, // to clean dist folder right before the buid process
   },
   module: {
     rules: [
       {
-        test: /\.((sa|sc|c)ss)$/,
-        use: ["style-loader", "css-loader", "sass-loader"],
+        test: /\.css$/,
+        use: [MiniCssExtractPlugin.loader, "css-loader"], // for normalize.css
+      },
+      {
+        test: /\.(s(a|c)ss)$/,
+        use: [
+          MiniCssExtractPlugin.loader, // 3. add <link> tag with our css file to HTML
+          "css-loader", // 2. turn css into valid js
+          "sass-loader" // 1. turn sass into valid css
+        ],
       },
       // By default every loadable attributes (for example - <img src="image.png"/>) is imported.
       // See more details here https://webpack.js.org/loaders/html-loader
       {
         test: /\.html$/,
-        use: ["html-loader"]
+        use: ["html-loader"] // load all images from html <img> tags to dist folder
       },
-      // We don't need "file-loader" here. "html-loader" loads all the images
-      // {
-      //   test: /\.(png|jpg|svg|gif)$/,
-      //   use: {
-      //     loader: 'file-loader',
-      //     options: {
-      //       name: '[name].[hash].[ext]',
-      //       outputPath: 'img',
-      //     },   
-      //   },
-      // },
     ]
   },
-  plugins: [new HtmlWebpackPlugin({template: './index.html'})]
+  plugins: [
+    new HtmlWebpackPlugin({template: './src/index.html'}), // create index.html file in "dist" folder based on template and add <script> with bundle
+    new MiniCssExtractPlugin({filename: '[name].[hash].css'}) // build all our css into separate file
+  ]
 };
